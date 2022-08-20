@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+    {% block body %}
+    {% load static %}
+    <style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          max-width: 600px;
+          margin: auto;
+          text-align: right;
+          font-family: arial;
+        }
+        a{
+            margin-right: 10px;
+        }
+        .btns{
+            color: black;
+            text-decoration: none;
+        }
+        .btns_prnt{
+            width: 100%;
+            text-align: end;
+            background-color: rgba(240, 248, 255, 0);
+            border: none;
+            /* padding: 6px; */
+
+        }
+        .btns_prnt:hover{
+            background-color:orange;
+            color: rgb(15, 14, 14);
+        }
+        .row{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            text-align: left;
+            font-family: arial; 
+        }
+    </style> 
+    <div class="card">
+        <h5 style="background-color:rgb(103, 175, 220) ; color:white; text-align: left; padding: 5px 0; width:100%;">List of Configerations</h5>
+        {% comment %} <a href="{% url 'create' %}"><button  class="btns_prnt" id="create"><h6>Show more</h6></button></a>
+         {% endcomment %}
+        <h6 style="text-align:left;">Printer settings</h6>
+            
+        
+        <a href="">
+        <button  class="btns_prnt" id="create">
+        <div class="row">
+            <div class="col-md-8">Printer</div>
+            <div class="col-md-4">Canon G2010 series</div>
+        </div>
+        </button>
+        </a>
+        <a href="">
+            <button  class="btns_prnt" >
+            <div class="row">
+                <div class="col-md-8">Set Preview as default</div>
+                <div class="col-md-4"><select><option value="yes">YES</option><option value="yes">No</option></select></div>
+            </div>
+            </button>
+            </a><br>
+            <h6 style="text-align:left;">Header Information</h6>
+            <a href="">
+                <button  class="btns_prnt" id="create">
+                <div class="row">
+                    <div class="col-md-8">Top Margin of Reports(in inches)</div>
+                    <div class="col-md-4">0.50</div>
+                </div>
+                </button>
+                </a>
+                <a href="">
+                    <button  class="btns_prnt" id="create">
+                    <div class="row">
+                        <div class="col-md-8">Show Date Range of Reports</div>
+                        <div class="col-md-4">Yes</div>
+                    </div>
+                    </button>
+                    </a>
+                    <a href="">
+                        <button  class="btns_prnt" id="create">
+                        <div class="row">
+                            <div class="col-md-8">Show Date and Time of Reports</div>
+                            <div class="col-md-4">No</div>
+                        </div>
+                        </button>
+                        </a>
+                        <a href="">
+                            <button  class="btns_prnt" id="create">
+                            <div class="row">
+                                <div class="col-md-8">Show Date and Time of Voucher Printing</div>
+                                <div class="col-md-4">No</div>
+                            </div>
+                            </button>
+                            </a>
+                            <br>
+                            <h6 style="text-align:left;">Company Details</h6>
+                            <a href="">
+                                <button  class="btns_prnt" id="create">
+                                <div class="row">
+                                    <div class="col-md-8">Include company logo(applicabe to Print/Export/Emai)</div>
+                                    <div class="col-md-4">No</div>
+                                </div>
+                                </button>
+                                </a>
+                                <a href="">
+                                    <button  class="btns_prnt" id="create">
+                                    <div class="row">
+                                        <div class="col-md-8">Show Company Name</div>
+                                        <div class="col-md-4">Yes</div>
+                                    </div>
+                                    </button>
+                                    </a>
+                                    <a href="">
+                                        <button  class="btns_prnt" id="create">
+                                        <div class="row">
+                                            <div class="col-md-8">Show Company Address</div>
+                                            <div class="col-md-4">Yes</div>
+                                        </div>
+                                        </button>
+                                        </a>
+       
+    </div>   
+{% endblock %}
